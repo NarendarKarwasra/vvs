@@ -1,0 +1,50 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/actor",
+      "destination": "/actor.html"
+    },
+    {
+      "source": "/Actor",
+      "destination": "/actor.html"
+    },
+    {
+      "source": "/Actor.html",
+      "destination": "/actor.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/training",
+      "destination": "/training.html"
+    },
+    {
+      "source": "/corporate-training",
+      "destination": "/training.html"
+    },
+    {
+      "source": "/speaker",
+      "destination": "/speaker.html"
+    },
+    {
+      "source": "/voice-over",
+      "destination": "/voice-over.html"
+    },
+    {
+      "source": "/media",
+      "destination": "/media.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    }
+  ]
+}

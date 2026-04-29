@@ -1,0 +1,13 @@
+{
+  "name": "vijay-vikram-singh-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static personal brand website for Vijay Vikram Singh with Vercel serverless lead endpoint.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

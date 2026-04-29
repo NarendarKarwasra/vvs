@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 150" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Vijay Vikram Singh</title>
+  <desc id="logoDesc">VVS monogram and Vijay Vikram Singh wordmark</desc>
+  <defs>
+    <linearGradient id="goldBright" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F9E2A5"/>
+      <stop offset="0.5" stop-color="#D8A944"/>
+      <stop offset="1" stop-color="#B07A1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="150" fill="none"/>
+  <g transform="translate(0,0)">
+    <text x="10" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="700" letter-spacing="-2" fill="url(#goldBright)">VVS</text>
+    <line x1="205" y1="26" x2="205" y2="122" stroke="#D8A944" stroke-width="2.4" opacity="0.95"/>
+    <text x="228" y="55" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" letter-spacing="4.4" fill="#FFF7E9">VIJAY VIKRAM SINGH</text>
+    <text x="230" y="89" font-family="Arial, Helvetica, sans-serif" font-size="13.8" font-weight="800" letter-spacing="4.0" fill="#E7BE70">NARRATOR  |  ACTOR  |  SPEAKER  |  COACH</text>
+    <line x1="230" y1="108" x2="690" y2="108" stroke="#D8A944" stroke-width="1.5" opacity="0.82"/>
+  </g>
+</svg>

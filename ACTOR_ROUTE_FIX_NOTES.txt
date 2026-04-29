@@ -1,0 +1,16 @@
+Actor page route fix
+
+Problem:
+Vercel/Linux hosting is case-sensitive. Actor.html, actor.html, and /actor are treated as different paths.
+
+Fix applied:
+- All internal links now point to lowercase actor.html.
+- actor.html is the canonical Actor page with full content.
+- Actor.html is kept as a redirect for backward compatibility.
+- vercel.json includes rewrites for /actor, /Actor, and /Actor.html.
+- sitemap.xml uses lowercase actor.html.
+
+Recommended public URL:
+https://www.vijayvikramsingh.com/actor
+or
+https://www.vijayvikramsingh.com/actor.html

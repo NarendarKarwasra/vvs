@@ -1,0 +1,15 @@
+Logo fix applied:
+1. Replaced old VS logo with a high-contrast VVS SVG wordmark.
+2. Header logo paths now use /assets/images/logo-vvs.svg for reliable Vercel loading.
+3. Footer logos now use .footer-logo instead of inline width styling.
+4. Added favicon.svg.
+5. Added CSS rules to stop the logo from appearing too small or faded.
+
+Files changed:
+- assets/images/logo-vvs.svg
+- assets/images/favicon.svg
+- assets/css/styles.css
+- all HTML pages
+
+After uploading to GitHub, Vercel should redeploy automatically.
+If the old logo still appears, clear browser cache or hard-refresh with Cmd+Shift+R / Ctrl+Shift+R.

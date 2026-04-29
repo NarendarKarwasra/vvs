@@ -1,0 +1,19 @@
+Vijay Vikram Singh Website - Visibility Fix Notes
+
+Fixed in this package:
+1. Header logo visibility on all pages
+   - Recreated /assets/images/logo-vvs.svg with high-contrast gold and white wordmark.
+   - Increased desktop/mobile logo sizing in /assets/css/styles.css.
+
+2. Contact page details visibility
+   - Added final CSS overrides for .contact-card and .contact-item text.
+   - Email, phone, location, and working hours now render in light text on the dark card.
+
+3. Lead Banana copyright
+   - Added /assets/images/lead-banana-india-logo.png.
+   - Footer copyright on all pages now reads:
+     Copyright 2025 [Lead Banana India logo] All rights reserved.
+
+After uploading to GitHub/Vercel, hard refresh the browser:
+- Mac: Cmd + Shift + R
+- Windows: Ctrl + Shift + R
