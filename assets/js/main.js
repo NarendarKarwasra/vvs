@@ -1,10 +1,14 @@
 const BRAND_CONFIG = {
   whatsappNumber: "919876543210", // TODO: Replace with Vijay Vikram Singh team's official WhatsApp number, country code only.
-  apiEndpoint: "/api/lead"
+  apiEndpoint: "/api/lead",
 };
 
-function qs(selector, root = document) { return root.querySelector(selector); }
-function qsa(selector, root = document) { return [...root.querySelectorAll(selector)]; }
+function qs(selector, root = document) {
+  return root.querySelector(selector);
+}
+function qsa(selector, root = document) {
+  return [...root.querySelectorAll(selector)];
+}
 
 function initMenu() {
   const toggle = qs(".menu-toggle");
@@ -33,7 +37,7 @@ function buildLeadMessage(data) {
     "",
     `Message: ${data.message || ""}`,
     "",
-    `Needs: ${data.needs || "None selected"}`
+    `Needs: ${data.needs || "None selected"}`,
   ];
   return lines.filter(Boolean).join("\n");
 }
@@ -45,7 +49,9 @@ function openWhatsApp(message) {
 
 function getFormData(form) {
   const data = Object.fromEntries(new FormData(form).entries());
-  data.needs = qsa("input[name='needs']:checked", form).map(i => i.value).join(", ");
+  data.needs = qsa("input[name='needs']:checked", form)
+    .map((i) => i.value)
+    .join(", ");
   return data;
 }
 
@@ -58,8 +64,10 @@ function initLeadForm() {
 
   function refreshDetails() {
     const value = typeSelect.value;
-    detailBlocks.forEach(block => {
-      const match = block.dataset.detailBlock === value || block.dataset.detailBlock === "all";
+    detailBlocks.forEach((block) => {
+      const match =
+        block.dataset.detailBlock === value ||
+        block.dataset.detailBlock === "all";
       block.style.display = match ? "block" : "none";
     });
   }
@@ -78,11 +86,14 @@ function initLeadForm() {
       await fetch(BRAND_CONFIG.apiEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, whatsappMessage: message })
+        body: JSON.stringify({ ...data, whatsappMessage: message }),
       });
-      if (status) status.textContent = "Enquiry captured. WhatsApp will open for instant confirmation.";
+      if (status)
+        status.textContent =
+          "Enquiry captured. WhatsApp will open for instant confirmation.";
     } catch (error) {
-      if (status) status.textContent = "Opening WhatsApp with your enquiry details.";
+      if (status)
+        status.textContent = "Opening WhatsApp with your enquiry details.";
     }
 
     openWhatsApp(message);
@@ -99,11 +110,20 @@ function initWhatsAppBot() {
   const options = qsa(".bot-option", bot);
 
   float.addEventListener("click", () => panel.classList.toggle("open"));
-  options.forEach(button => {
-    button.addEventListener("click", () => openWhatsApp(button.dataset.message));
+  options.forEach((button) => {
+    button.addEventListener("click", () =>
+      openWhatsApp(button.dataset.message),
+    );
+  });
+  document.addEventListener("click", (e) => {
+    if (!bot.contains(e.target)) {
+      panel.classList.remove("open");
+    }
   });
   send.addEventListener("click", () => {
-    const text = input.value.trim() || "Hi, I want to enquire about Vijay Vikram Singh's services.";
+    const text =
+      input.value.trim() ||
+      "Hi, I want to enquire about Vijay Vikram Singh's services.";
     openWhatsApp(text);
   });
 }
