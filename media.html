@@ -77,29 +77,39 @@
         <h2 class="section-title">In Conversation. In Print. In Focus.</h2>
       </div>
       <div class="media-grid">
-        <div class="resource-card">
-          <h3>The Hindu</h3>
-          <p>Redefining communication in the modern workplace.</p>
+        <div class="resource-card" onclick="openLightbox('assets/images/media/media-1.jpeg')">
+          <div class="image-box" style="background-image: url('assets/images/media/media-1.jpeg');"></div>
+          <h3>Times of India</h3>
+          <p>Bigg Boss narrator tests positive for COVID-19, says he is recording from home for the reality show.</p>
+          <a href="https://timesofindia.indiatimes.com/tv/news/hindi/bigg-boss-narrator-tests-positive-for-covid-19/articleshow/88850621.cms"
+            target="_blank" class="read-more-btn">
+            Read Full Article &rarr;
+          </a>
         </div>
-        <div class="resource-card">
-          <h3>Indian Express</h3>
-          <p>The voice that connects and inspires.</p>
+        <div class="resource-card" onclick="openLightbox('assets/images/media/media-2.webp')">
+          <div class="image-box" style="background-image: url('assets/images/media/media-2.webp');"></div>
+          <h3>Dainik Bhaskar</h3>
+          <p>'बिगबॉस' विजय विक्रम ने अपनी जिंदगी का किस्सा सुनाया, लोगों को किया मोटीवेट</p>
+          <a href="https://www.bhaskar.com/local/uttar-pradesh/lucknow/news/i-am-grateful-to-lucknow-this-city-saved-my-lifebigg-bosss-voice-over-artist-vijay-vikram-motivates-by-telling-the-story-of-his-life-133926777.html?_branch_match_id=1581220079775205902&utm_campaign=133926777&utm_medium=sharing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0nMzMvM1kvKSCzOTizSS87P1fcrNvM0Ms0yzfFPsq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FAA9CuXJAAAAA"
+            target="_blank" class="read-more-btn">
+            Read Full Article &rarr;
+          </a>
         </div>
-        <div class="resource-card">
-          <h3>Business Today</h3>
-          <p>Leadership through clarity and empathy.</p>
+        <div class="resource-card" onclick="openLightbox('assets/images/media/media-3.jpg')">
+          <div class="image-box" style="background-image: url('assets/images/media/media-3.jpg');"></div>
+          <h3>Samar Saleel</h3>
+          <p>असफलता ही सफलता का मार्ग प्रशस्त करती है- विजय विक्रम सिंह</p>
+          <a href="https://samarsaleel.com/failure-paves-the-way-for-success-vijay-vikram-singh/427610" target="_blank"
+            class="read-more-btn">
+            Read Full Article &rarr;
+          </a>
         </div>
-        <div class="resource-card">
-          <h3>Outlook</h3>
-          <p>Reinventing with purpose and voice.</p>
-        </div>
-        <div class="resource-card">
-          <h3>YourStory</h3>
-          <p>From corporate to coach and communicator.</p>
-        </div>
-        <div class="resource-card">
-          <h3>Times Now</h3>
-          <p>Public conversation that drives change.</p>
+      </div>
+      <!-- Full Screen Image Modal (Overlay) -->
+      <div id="imageLightbox" class="video-modal">
+        <span class="close-modal" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content image-display">
+          <img id="fullResImage" src="" alt="Full Resolution">
         </div>
       </div>
     </div>
@@ -126,17 +136,31 @@
         <h2 class="section-title">Interviews and Podcast Appearances</h2>
       </div>
       <div class="media-grid">
-        <div class="video-card">
-          <div class="video-thumb">&#9658;</div>
-          <h3>Voice, Reinvention and Presence</h3>
+        <!-- Updated Card 1: Using YouTube Link -->
+        <div class="video-card" onclick="openVideo('https://www.youtube.com/watch?v=uEerlAHozcs')">
+          <div class="video-thumb" style="background-image: url('assets/images/videos/narration-1.webp');">&#9658;</div>
+          <h3>Narration and Voice-Over</h3>
         </div>
-        <div class="video-card">
-          <div class="video-thumb">&#9658;</div>
-          <h3>Leadership Communication Talk</h3>
+
+        <!-- Updated Card 2: Example of another link -->
+        <div class="video-card" onclick="openVideo('https://www.youtube.com/watch?v=1u9_EtsgOhk')">
+          <div class="video-thumb" style="background-image: url('assets/images/videos/acting-1.webp');">&#9658;</div>
+          <h3>Acting Highlights</h3>
         </div>
-        <div class="video-card">
-          <div class="video-thumb">&#9658;</div>
-          <h3>Behind the Big Voice</h3>
+
+        <!-- Updated Card 3 -->
+        <div class="video-card" onclick="openVideo('https://www.youtube.com/watch?v=s0Z5HfaZrJE')">
+          <div class="video-thumb" style="background-image: url('assets/images/videos/workshop-1.webp');">&#9658;</div>
+          <h3>Speaking and Workshops</h3>
+        </div>
+      </div>
+      <!-- Full Screen Modal -->
+      <div id="videoModal" class="video-modal">
+        <span class="close-modal" onclick="closeVideo()">&times;</span>
+        <div class="modal-content">
+          <!-- Replaced <video> with <iframe> for YouTube compatibility -->
+          <iframe id="youtubePlayer" width="100%" height="100%" src="" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -239,22 +263,22 @@
         <p>Helping leaders, brands and audiences connect through voice, clarity, presence and story.</p>
 
         <div class="socials">
-          <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true">
+          <a href="https://www.linkedin.com/in/vijay-v-singh/" target="_blank" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M6.94 8.5V19H3.5V8.5h3.44ZM5.22 7.06c-1.1 0-1.84-.77-1.84-1.73 0-.98.76-1.73 1.88-1.73s1.83.75 1.85 1.73c0 .96-.74 1.73-1.89 1.73Zm15.28 5.52V19h-3.43v-6.03c0-1.52-.54-2.56-1.9-2.56-1.03 0-1.65.7-1.92 1.38-.1.24-.12.58-.12.92V19H9.7s.05-9.57 0-10.5h3.43v1.49c.46-.7 1.28-1.69 3.11-1.69 2.27 0 4.26 1.48 4.26 4.67Z"
                 fill="currentColor" />
             </svg></a>
-          <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true">
+          <a href="https://www.instagram.com/vijayvikram77/" aria-label="Instagram" title="Instagram" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.8 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"
                 fill="currentColor" />
             </svg></a>
-          <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
+          <a href="https://www.youtube.com/@vijayvikramsingh6" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M21.58 7.19a2.9 2.9 0 0 0-2.04-2.05C17.74 4.66 12 4.66 12 4.66s-5.74 0-7.54.48A2.9 2.9 0 0 0 2.42 7.2C1.95 9 1.95 12 1.95 12s0 3 .47 4.8a2.9 2.9 0 0 0 2.04 2.05c1.8.48 7.54.48 7.54.48s5.74 0 7.54-.48a2.9 2.9 0 0 0 2.04-2.05c.47-1.8.47-4.8.47-4.8s0-3-.47-4.8ZM10.16 15.02V8.98L15.4 12l-5.24 3.02Z"
                 fill="currentColor" />
             </svg></a>
-          <a href="#" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+          <a href="https://www.facebook.com/vikramkiawaaz/" aria-label="Facebook" title="Facebook" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M13.32 21v-7.84h2.63l.39-3.06h-3.02V8.14c0-.89.25-1.49 1.52-1.49h1.62V3.9c-.28-.04-1.24-.12-2.37-.12-2.35 0-3.96 1.44-3.96 4.08v2.24H7.48v3.06h2.65V21h3.19Z"
                 fill="currentColor" />
@@ -302,7 +326,7 @@
 
         <p>
           <strong>Phone:</strong><br>
-          <a href="tel:+919876543210">+91 98765 43210</a>
+          <a href="tel:+919084848406">+91 90848 48406</a>
         </p>
 
         <p>
@@ -356,6 +380,73 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- script for image full size -->
+  <script>
+    function openLightbox(imageSrc) {
+      const modal = document.getElementById('imageLightbox');
+      const fullImg = document.getElementById('fullResImage');
+
+      fullImg.src = imageSrc;
+      modal.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('imageLightbox');
+      const fullImg = document.getElementById('fullResImage');
+
+      modal.style.display = 'none';
+      fullImg.src = ""; // Clear src to save memory
+    }
+
+    // Close if user clicks outside the image
+    window.onclick = function (event) {
+      const modal = document.getElementById('imageLightbox');
+      if (event.target == modal) {
+        closeLightbox();
+      }
+    }
+  </script>
+
+  <!-- script for video modal -->
+  <script>
+    function getYoutubeEmbedUrl(url) {
+      let videoId = '';
+      // Extract ID from standard URL
+      if (url.includes('v=')) {
+        videoId = url.split('v=')[1].split('&')[0];
+      }
+      // Extract ID from short URL (youtu.be)
+      else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1];
+      }
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    }
+
+    function openVideo(videoSrc) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('youtubePlayer');
+
+      iframe.src = getYoutubeEmbedUrl(videoSrc);
+      modal.style.display = 'flex';
+    }
+
+    function closeVideo() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('youtubePlayer');
+
+      modal.style.display = 'none';
+      iframe.src = ""; // Stop the video by clearing the source
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById('videoModal');
+      if (event.target == modal) {
+        closeVideo();
+      }
+    }
+  </script>
+
 </body>
 
 </html>

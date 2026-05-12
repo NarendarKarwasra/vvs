@@ -1,5 +1,5 @@
 const BRAND_CONFIG = {
-  whatsappNumber: "919876543210", // TODO: Replace with Vijay Vikram Singh team's official WhatsApp number, country code only.
+  whatsappNumber: "919084848406",
   apiEndpoint: "/api/lead",
 };
 
