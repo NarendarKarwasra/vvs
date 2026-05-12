@@ -1543,17 +1543,17 @@ textarea {
 }
 
 .bot-float-icon {
-  width: 28px;
-  height: 28px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.bot-float-icon svg {
-  width: 28px;
-  height: 28px;
+.bot-float-icon i {
+  font-size: 30px;
 }
+
+
+
 
 @media (max-width: 700px) {
   .bot-float {
