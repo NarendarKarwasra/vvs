@@ -151,18 +151,34 @@
         <div class="eyebrow">Featured Showreel</div>
         <h2 class="section-title">Watch and Listen</h2>
       </div>
+
       <div class="media-grid">
-        <div class="video-card">
-          <div class="video-thumb">&#9658;</div>
+        <!-- Updated Card 1: Using YouTube Link -->
+        <div class="video-card" onclick="openVideo('https://www.youtube.com/watch?v=uEerlAHozcs')">
+          <div class="video-thumb" style="background-image: url('assets/images/videos/narration-1.JPG');">&#9658;</div>
           <h3>Narration and Voice-Over</h3>
         </div>
-        <div class="video-card">
-          <div class="video-thumb">&#9658;</div>
+
+        <!-- Updated Card 2: Example of another link -->
+        <div class="video-card" onclick="openVideo('https://www.youtube.com/watch?v=1u9_EtsgOhk')">
+          <div class="video-thumb" style="background-image: url('assets/images/videos/acting-1.JPG');">&#9658;</div>
           <h3>Acting Highlights</h3>
         </div>
-        <div class="video-card">
-          <div class="video-thumb">&#9658;</div>
+
+        <!-- Updated Card 3 -->
+        <div class="video-card" onclick="openVideo('https://www.youtube.com/watch?v=bpCzFq_51N8&t=14s')">
+          <div class="video-thumb" style="background-image: url('assets/images/videos/workshop-1.jpeg');">&#9658;</div>
           <h3>Speaking and Workshops</h3>
+        </div>
+      </div>
+
+      <!-- Full Screen Modal -->
+      <div id="videoModal" class="video-modal">
+        <span class="close-modal" onclick="closeVideo()">&times;</span>
+        <div class="modal-content">
+          <!-- Replaced <video> with <iframe> for YouTube compatibility -->
+          <iframe id="youtubePlayer" width="100%" height="100%" src="" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -328,6 +344,44 @@
 
 
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function getYoutubeEmbedUrl(url) {
+      let videoId = '';
+      // Extract ID from standard URL
+      if (url.includes('v=')) {
+        videoId = url.split('v=')[1].split('&')[0];
+      }
+      // Extract ID from short URL (youtu.be)
+      else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1];
+      }
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    }
+
+    function openVideo(videoSrc) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('youtubePlayer');
+
+      iframe.src = getYoutubeEmbedUrl(videoSrc);
+      modal.style.display = 'flex';
+    }
+
+    function closeVideo() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('youtubePlayer');
+
+      modal.style.display = 'none';
+      iframe.src = ""; // Stop the video by clearing the source
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById('videoModal');
+      if (event.target == modal) {
+        closeVideo();
+      }
+    }
+  </script>
 
 </body>
 
